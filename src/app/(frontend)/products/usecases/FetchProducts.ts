@@ -6,7 +6,7 @@ export class FetchProducts {
     page: number,
     search?: string,
     category?: string,
-    country?: string
+    country?: string,
   ) {
     const payload = await getPayload({ config });
     const products = await payload.find({

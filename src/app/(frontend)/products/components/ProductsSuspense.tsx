@@ -30,7 +30,7 @@ const ProductsSuspense: FunctionComponent<ProductsSuspenseProps> = ({
   const searchTerm = useMemo(() => search ?? "", [search]);
   const selectedCategory = useMemo(
     () => category ?? "All Categories",
-    [category]
+    [category],
   );
   const selectedCountry = useMemo(() => country ?? "All Countries", [country]);
 

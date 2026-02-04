@@ -16,7 +16,7 @@ interface ProductsState {
   initializeProducts: (
     products: Product[],
     hasMore: boolean,
-    page: number
+    page: number,
   ) => void;
   selectedProduct: Product | null;
   updateSelectedProduct: (product: Product | null) => void;

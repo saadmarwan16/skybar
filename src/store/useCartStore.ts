@@ -26,7 +26,7 @@ export const useCartStore = create<CartState>()(
       addItem: (product) => {
         const items = get().items;
         const existingItem = items.find(
-          (item) => item.product.id === product.id
+          (item) => item.product.id === product.id,
         );
 
         if (existingItem) {
@@ -34,7 +34,7 @@ export const useCartStore = create<CartState>()(
             items: items.map((item) =>
               item.product.id === product.id
                 ? { ...item, quantity: item.quantity + 1 }
-                : item
+                : item,
             ),
           });
         } else {
@@ -54,7 +54,7 @@ export const useCartStore = create<CartState>()(
 
         set({
           items: get().items.map((item) =>
-            item.product.id === productId ? { ...item, quantity } : item
+            item.product.id === productId ? { ...item, quantity } : item,
           ),
         });
       },
@@ -70,6 +70,6 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: "cart-storage",
-    }
-  )
+    },
+  ),
 );

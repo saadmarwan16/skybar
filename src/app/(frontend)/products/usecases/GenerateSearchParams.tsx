@@ -12,7 +12,7 @@ export class GenerateSearchParams {
     preview?: string,
     search?: string,
     category?: string,
-    country?: string
+    country?: string,
   ) {
     const params: IQuery = {};
     if (preview) params.preview = preview;

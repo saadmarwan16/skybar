@@ -50,7 +50,7 @@ const QuoteRequestDialog: FunctionComponent<QuoteRequestDialogProps> = ({
             item.product.price_range.min_price
           } - $${item.product.price_range.max_price}\n   Quantity: ${
             item.quantity
-          }\n   Min Order: ${item.product.min_order}\n`
+          }\n   Min Order: ${item.product.min_order}\n`,
       )
       .join("\n");
   };
@@ -68,7 +68,7 @@ const QuoteRequestDialog: FunctionComponent<QuoteRequestDialogProps> = ({
       const quoteDetails = formatQuoteItems(cartItems);
       const totalItems = cartItems.reduce(
         (sum, item) => sum + item.quantity,
-        0
+        0,
       );
 
       await emailjs.send(
@@ -84,7 +84,7 @@ const QuoteRequestDialog: FunctionComponent<QuoteRequestDialogProps> = ({
           total_items: totalItems,
           total_products: cartItems.length,
         },
-        { publicKey }
+        { publicKey },
       );
 
       toast.success("Quote Request Sent Successfully!", {

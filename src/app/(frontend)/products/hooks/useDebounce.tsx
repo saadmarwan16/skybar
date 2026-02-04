@@ -7,7 +7,7 @@ export const useDebounce = (
   value: string,
   selectedCategory: string,
   selectedCountry: string,
-  delay: number = 500
+  delay: number = 500,
 ) => {
   const [debouncedValue, setDebouncedValue] = useState(value);
   const router = useRouter();
@@ -19,11 +19,11 @@ export const useDebounce = (
           preview,
           value,
           selectedCategory,
-          selectedCountry
+          selectedCountry,
         )}`,
         {
           scroll: false,
-        }
+        },
       );
     }, delay);
 

@@ -92,7 +92,7 @@ const Products: FunctionComponent<ProductsPageProps> = async (props) => {
     1,
     search,
     category,
-    country
+    country,
   );
 
   return (

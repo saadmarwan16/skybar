@@ -44,11 +44,11 @@ const ProductsFilter: FunctionComponent<ProductsFilterProps> = ({
                     preview,
                     e.target.value,
                     selectedCategory,
-                    selectedCountry
+                    selectedCountry,
                   )}`,
                   {
                     scroll: false,
-                  }
+                  },
                 );
               }}
               className="pl-10 h-12 text-base shadow-md border-2 hover:border-primary/30 focus:border-primary transition-all"
@@ -70,11 +70,11 @@ const ProductsFilter: FunctionComponent<ProductsFilterProps> = ({
                       preview,
                       searchTerm,
                       value,
-                      selectedCountry
+                      selectedCountry,
                     )}`,
                     {
                       scroll: false,
-                    }
+                    },
                   )
                 }
                 options={categories?.map((cat) => {
@@ -107,11 +107,11 @@ const ProductsFilter: FunctionComponent<ProductsFilterProps> = ({
                       preview,
                       searchTerm,
                       selectedCategory,
-                      value
+                      value,
                     )}`,
                     {
                       scroll: false,
-                    }
+                    },
                   )
                 }
                 options={countries?.map((country) => {

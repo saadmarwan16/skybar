@@ -29,7 +29,7 @@ const ProductsGrid: FunctionComponent<ProductsGridProps> = ({
 
   const handleAddToCart = (
     e: React.MouseEvent,
-    product: (typeof products)[0]
+    product: (typeof products)[0],
   ) => {
     e.stopPropagation();
     addItem(product);

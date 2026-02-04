@@ -16,13 +16,13 @@ interface NativeSelectProps {
 const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
   (
     { className, placeholder, options, value, onChange, disabled, ...props },
-    ref
+    ref,
   ) => {
     const [isOpen, setIsOpen] = React.useState(false);
     const [selectedValue, setSelectedValue] = React.useState(value || "");
 
     const selectedOption = options?.find(
-      (option) => option.value === selectedValue
+      (option) => option.value === selectedValue,
     );
 
     React.useEffect(() => {
@@ -44,7 +44,7 @@ const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
             "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
             "disabled:cursor-not-allowed disabled:opacity-50",
             isOpen && "ring-1 ring-ring",
-            className
+            className,
           )}
           onClick={() => !disabled && setIsOpen(!isOpen)}
           onKeyDown={(e) => {
@@ -61,7 +61,7 @@ const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
           <span
             className={cn(
               "truncate",
-              !selectedValue && "text-muted-foreground"
+              !selectedValue && "text-muted-foreground",
             )}
           >
             {selectedOption?.label || placeholder || "Select..."}
@@ -69,7 +69,7 @@ const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
           <ChevronDown
             className={cn(
               "h-4 w-4 opacity-50 transition-transform duration-200",
-              isOpen && "rotate-180"
+              isOpen && "rotate-180",
             )}
           />
         </div>
@@ -88,7 +88,7 @@ const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
                     "hover:bg-accent hover:text-accent-foreground",
                     "focus:bg-accent focus:text-accent-foreground focus:outline-none",
                     selectedValue === option.value &&
-                      "bg-accent text-accent-foreground"
+                      "bg-accent text-accent-foreground",
                   )}
                   onClick={() => handleSelect(option.value)}
                   onKeyDown={(e) => {
@@ -128,7 +128,7 @@ const NativeSelect = React.forwardRef<HTMLDivElement, NativeSelectProps>(
         )}
       </div>
     );
-  }
+  },
 );
 
 NativeSelect.displayName = "NativeSelect";
